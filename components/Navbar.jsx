@@ -8,7 +8,7 @@ const Navbar = () => {
   const { toggle, toggleFunction } = useContext(ThemeContext);
 
   return (
-    <div className="navbar px-5 lg:px-20 ">
+    <nav className="navbar px-5 lg:px-20 ">
       <div className="flex-1 lg:flex-none">
         <a className="text-lg font-bold">Ahanaf</a>
       </div>
@@ -133,7 +133,7 @@ const Navbar = () => {
           </label>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
