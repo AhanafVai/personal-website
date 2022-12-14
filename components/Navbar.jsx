@@ -111,22 +111,31 @@ const Navbar = () => {
                   </div>
                 </label>
               </div>
-              <ul className="grid grid-cols-3 gap-3 justify-center p-5">
-                <li className="py-5">
-                  <a>Home</a>
+              <ul className="grid grid-cols-3 gap-3 justify-center p-5 ">
+                <li className="py-5 text-sm">
+                  <a href="#home" id="home">
+                    Home
+                  </a>
                 </li>
-
-                <li className="py-5">
-                  <a>About</a>
+                <li className="py-5 text-sm">
+                  <a href="#about" id="about">
+                    About
+                  </a>
                 </li>
-                <li className="py-5">
-                  <a>Service</a>
+                <li className="py-5 text-sm">
+                  <a href="#service" id="service">
+                    Service
+                  </a>
                 </li>
-                <li className="py-5">
-                  <a>Portfolio</a>
+                <li className="py-5 text-sm">
+                  <a href="#portfolio" id="portfolio">
+                    Portfolio
+                  </a>
                 </li>
-                <li className="py-5">
-                  <a>Contact</a>
+                <li className="py-5 text-sm">
+                  <a href="#contact" id="contact">
+                    Contact
+                  </a>
                 </li>
               </ul>
             </label>

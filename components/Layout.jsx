@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <div data-theme={toggle ? "halloween" : "cmyk"}>
       <Navbar />
-      <main className="h-screen my-10 lg:mx-20">{children}</main>
+      <main className=" my-10 lg:mx-20">{children}</main>
       <Footer />
     </div>
   );
