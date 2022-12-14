@@ -1,53 +1,27 @@
 import React from "react";
 import About from "../components/About";
 import Hero from "../components/Hero";
+import Service from "../components/Service";
+import { client } from "../lib/client";
 
-const index = () => {
+const index = ({ aboutData }) => {
+  console.log(aboutData);
   return (
     <>
       <Hero />
-      <About />
+      {aboutData.map((data) => (
+        <About key={data._id} data={data} />
+      ))}
+      <Service />
     </>
   );
 };
 
+export async function getServerSideProps() {
+  const aboutData = await client.fetch(`*[_type == "about"]`);
+  return {
+    props: { aboutData },
+  };
+}
+
 export default index;
-
-// import React from 'react';
-// import { client, urlFor } from '../lib/client';
-
-// const index = ({data}) => {
-
-//   return (
-//     <div>
-
-//       {data.map(d=>
-
-//        { return <div key={d._id}>
-//              <h1 >{d.name}</h1>
-//             <img
-
-//             src={urlFor(d.image
-// )}
-//             width={250}
-//             height={250}
-//             className="product-image"
-//           />
-//       </div>
-
-//        })}
-//     </div>
-//   );
-// };
-
-// export async function getStaticProps() {
-//   const data = await client.fetch(`*[_type == "test"]`);
-
-//   return {
-//     props: {
-//       data
-//     }
-//   };
-// }
-
-// export default index;

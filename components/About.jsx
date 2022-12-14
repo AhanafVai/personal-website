@@ -1,14 +1,14 @@
-import Image from "next/image";
 import { useContext } from "react";
 import { CgFileDocument } from "react-icons/cg";
 import { FiFigma } from "react-icons/fi";
 import { TbBrandNextjs } from "react-icons/tb";
 import { TfiServer } from "react-icons/tfi";
 import { ThemeContext } from "../context/ThemeContext";
-import profilePic from "../public/profilePic.jpg";
+import { urlFor } from "../lib/client";
 
-const About = () => {
+const About = ({ data }) => {
   const { toggle } = useContext(ThemeContext);
+
   return (
     <section className="my-32">
       {/* article */}
@@ -22,7 +22,7 @@ const About = () => {
         {/* image */}
         <figure className="avatar flex justify-center my-5 md:w-2/5 ">
           <div className="w-48 rounded-xl md:w-full">
-            <Image src={profilePic} alt="ahanaf" />
+            <img src={urlFor(data.image)} width={250} height={250} />
           </div>
         </figure>
         {/* skill card */}
@@ -47,11 +47,7 @@ const About = () => {
             </div>
           </aside>
           <article className="p-5 space-y-10 text-justify ">
-            <p className="py-2">
-              A Frontend developer built with Next/React and designed by
-              Scss/Tailwind. Able to create a functional and attractive digital
-              environment and ensuring great user experience.
-            </p>
+            <p className="py-2">{data.desc}</p>
             {toggle ? (
               <a
                 href="../public/Resume.pdf"
