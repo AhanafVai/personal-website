@@ -8,9 +8,11 @@
   height: 300px;
   /* overflow: hidden; */
   border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  border: solid 5px rgba(255, 255, 255, 0.253);
   background: url("../assets/Ahanaf.jpg");
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   animation: blob 4s linear infinite;
 }

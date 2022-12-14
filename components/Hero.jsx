@@ -6,16 +6,18 @@ import classes from "../styles/blob.module.css";
 const Hero = () => {
   const { toggle } = useContext(ThemeContext);
   return (
-    <section className="sm:flex">
+    <section className="md:mt-32 md:grid grid-cols-2 ">
       {/* Image */}
-      <figure className={classes.hero__image}>
+
+      <figure className={`${classes.hero__image} md:order-1 `}>
         <div className={classes.blob}></div>
         <figcaption></figcaption>
       </figure>
+
       {/* Article */}
-      <article className="py-10 space-y-5">
-        <h1 className="text-4xl font-bold">Ahanaf Abdullah</h1>
-        <h4 className="font-semibold"># Frontend Developer</h4>
+      <article className="w-3/4 mx-auto my-10 space-y-5 md:w-11/12  ">
+        <h1 className="text-3xl font-bold md:text-4xl">Ahanaf Abdullah</h1>
+        <h4 className="font-semibold md:text-xl"># Frontend Developer</h4>
         <p className="">
           I'm interested in UI/UX and I love to create beautiful and performant
           products with delightful user experiences.
