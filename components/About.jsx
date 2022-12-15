@@ -30,38 +30,38 @@ const About = ({ data }) => {
           </div>
         </figure>
         {/* skill card */}
-        <div className="md:w-1/2 ">
+        <div className="md:w-1/2">
           <aside className=" flex gap-5 justify-center">
-            <div className=" w-28 p-5 text-center bg-base-100 shadow-lg rounded-lg  ">
+            <div className=" w-18 p-5 text-center bg-base-100 shadow-lg rounded-lg mb:w-48">
               <FiFigma className=" text-xl my-1 mx-auto" />
               <article>
                 <h4>Figma</h4>
                 <p className="text-sm">Design</p>
               </article>
             </div>
-            <div className=" w-28 p-5 text-center bg-base-100 shadow-lg rounded-lg">
+            <div className=" w-18 p-5 text-center bg-base-100 shadow-lg rounded-lg mb:w-48">
               <TbBrandNextjs className=" text-xl my-1 mx-auto" />
-              <h4>React</h4>
-              <p className="text-sm">UI</p>
+              <article>
+                <h4>React</h4>
+                <p className="text-sm">UI</p>
+              </article>
             </div>
-            <div className=" w-28 p-5 text-center bg-base-100 shadow-lg rounded-lg">
+            <div className=" w-18 p-5 text-center bg-base-100 shadow-lg rounded-lg mb:w-48">
               <TfiServer className=" text-xl my-1 mx-auto" />
               <h4>CMS</h4>
               <p className="text-sm">Backend</p>
             </div>
           </aside>
-          <article className="p-5 space-y-10 text-justify ">
+          <article className="p-5 space-y-10 text-justify w-[90%] mx-auto md:w-full">
             <p className="py-2">{data.desc}</p>
-            {toggle ? (
-              <a href={ref} download className="btn btn-primary ">
-                Download CV <CgFileDocument className="text-xl" />
-              </a>
-            ) : (
-              <a href={ref} download className="btn  btn-neutral">
-                {" "}
-                Download CV <CgFileDocument className="text-xl" />
-              </a>
-            )}
+
+            <a
+              href={ref}
+              download
+              className={`btn ${toggle ? "btn-primary" : "btn-neutral"}`}
+            >
+              Download CV <CgFileDocument className="text-xl" />
+            </a>
           </article>
         </div>
       </div>

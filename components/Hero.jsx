@@ -22,24 +22,15 @@ const Hero = () => {
           I'm interested in UI/UX and I love to create beautiful and performant
           products with delightful user experiences.
         </p>
-        {toggle ? (
-          <a
-            href="mailto:ahanafabdullah9@gmail.com"
-            className="btn btn-primary "
-          >
-            Say Hello
-            <FiSend className="text-2xl" />
-          </a>
-        ) : (
-          <a
-            href="mailto:ahanafabdullah9@gmail.com"
-            className="btn  btn-neutral"
-          >
-            {" "}
-            Say Hello{"  "}
-            <FiSend className="text-2xl" />
-          </a>
-        )}
+
+        <a
+          href="mailto:ahanafabdullah9@gmail.com"
+          className={`btn ${toggle ? "btn-primary" : "btn-neutral"}`}
+        >
+          {" "}
+          Say Hello{"  "}
+          <FiSend className="text-2xl" />
+        </a>
       </article>
     </section>
   );

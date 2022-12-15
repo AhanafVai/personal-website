@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
 
@@ -51,24 +52,14 @@ const Portfolio = ({ projectData }) => {
                   )}
                 </p>
                 <div>
-                  {toggle ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="btn btn-outline btn-primary "
-                    >
-                      Launch
-                    </a>
-                  ) : (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="btn btn-outline  btn-neutral"
-                    >
-                      {" "}
-                      Launch
-                    </a>
-                  )}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className={`btn ${toggle ? "btn-primary" : "btn-neutral"} `}
+                  >
+                    {" "}
+                    Launch <FaExternalLinkAlt />
+                  </a>
                 </div>
               </div>
             </div>
