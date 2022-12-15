@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GoVerified } from "react-icons/go";
 import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
+import classes from "../styles/animation.module.css";
 
 const Service = ({ serviceData }) => {
   const { toggle } = useContext(ThemeContext);
@@ -20,7 +21,7 @@ const Service = ({ serviceData }) => {
         {serviceData.map((service) => (
           <div
             key={service._id}
-            className={`hover:animate-bounce hover:shadow-primary card w-4/5 ${
+            className={`${classes.element} hover:shadow-primary card w-4/5 ${
               toggle ? "bg-base-300" : "bg-base-100"
             } shadow-lg mx-auto my-10 `}
           >

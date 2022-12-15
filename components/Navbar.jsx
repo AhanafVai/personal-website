@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AiOutlineAppstoreAdd, AiOutlineClose } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { ImSun } from "react-icons/im";
@@ -6,9 +6,25 @@ import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { toggle, toggleFunction } = useContext(ThemeContext);
+  const [isSticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isSticky]);
 
   return (
-    <nav className="navbar px-5 lg:px-20 ">
+    <nav
+      className={` ${
+        isSticky ? "sticky z-20 opacity-95 shadow top-0" : "static"
+      }   navbar px-5 lg:px-20 bg-base-100 `}
+    >
       <div className="flex-1 lg:flex-none">
         <a className="text-lg font-bold">Ahanaf</a>
       </div>
