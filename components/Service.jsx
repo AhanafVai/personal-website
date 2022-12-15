@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GoVerified } from "react-icons/go";
+import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
 
 const Service = ({ serviceData }) => {
+  const { toggle } = useContext(ThemeContext);
   return (
-    <section>
-      <article className="text-xl font-bold text-center md:text-5xl">
-        <h2>
+    <section className="mt-32">
+      <article>
+        <h2 className="text-2xl font-bold text-center md:text-5xl">
           Service <span className="text-primary">& Skill</span>
         </h2>
+        <h4 className="text-xs text-center  md:text-xl ">
+          What I'II do for you
+        </h4>
       </article>
+
       <div className="md:flex gap-2">
         {serviceData.map((service) => (
           <div
             key={service._id}
-            className="hover:animate-bounce card w-4/5 bg-base-100 shadow-lg mx-auto my-10 "
+            className={`hover:animate-bounce hover:shadow-primary card w-4/5 ${
+              toggle ? "bg-base-300" : "bg-base-100"
+            } shadow-lg mx-auto my-10 `}
           >
-            <figure className="avatar px-10 pt-10 ">
+            <figure className="avatar px-10 pt-10">
               <div className="w-8 rounded">
                 <img src={urlFor(service.icon)} alt="code" />
               </div>

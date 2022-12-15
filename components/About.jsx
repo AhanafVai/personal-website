@@ -9,13 +9,17 @@ import { urlFor } from "../lib/client";
 const About = ({ data }) => {
   const { toggle } = useContext(ThemeContext);
 
+  const ref =
+    "https://cdn.sanity.io/files/k29ugrfd/production/26675e3c307193717a7b291b18cacc05fd506286.pdf";
+
   return (
-    <section className="my-32">
+    <section className="mt-32">
       {/* article */}
-      <article className="text-xl font-bold text-center md:text-5xl">
-        <h2>
+      <article>
+        <h2 className="text-2xl font-bold text-center md:text-5xl">
           About <span className="text-primary">Me</span>
         </h2>
+        <h4 className="text-xs text-center  md:text-xl ">My Introduction</h4>
       </article>
 
       <div className="md:my-10 md:flex justify-between items-center">
@@ -49,19 +53,11 @@ const About = ({ data }) => {
           <article className="p-5 space-y-10 text-justify ">
             <p className="py-2">{data.desc}</p>
             {toggle ? (
-              <a
-                href="../public/Resume.pdf"
-                download
-                className="btn btn-primary "
-              >
+              <a href={ref} download className="btn btn-primary ">
                 Download CV <CgFileDocument className="text-xl" />
               </a>
             ) : (
-              <a
-                href="../public/Resume.pdf"
-                download
-                className="btn  btn-neutral"
-              >
+              <a href={ref} download className="btn  btn-neutral">
                 {" "}
                 Download CV <CgFileDocument className="text-xl" />
               </a>
