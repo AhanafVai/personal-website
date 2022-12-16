@@ -11,8 +11,8 @@ const Pagination = ({ projectPerPage, totalProjects, paginate }) => {
   }
 
   return (
-    <nav className="my-5 mx-auto" aria-label="Page navigation example">
-      <div className="space-x-5">
+    <nav className="my-5 md:mx-auto" aria-label="Page navigation example">
+      <div className="space-x-5 text-center">
         {pageNumbers.map((number) => (
           <a
             key={number}

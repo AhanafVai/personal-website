@@ -11,14 +11,19 @@ const Footer = () => {
         toggle ? "bg-base-300" : "bg-base-200"
       } text-base-content rounded`}
     >
+      <article>
+        <a href="#hero" className="text-lg font-bold">
+          Ahanaf
+        </a>
+      </article>
       <div className="grid grid-flow-col gap-4">
         <a href="#hero" className="link link-hover">
           Home
         </a>
-        <a href="#abt" className="link link-hover">
+        <a href="#about" className="link link-hover">
           About
         </a>
-        <a id="port" className="link link-hover">
+        <a id="portfolios" className="link link-hover">
           Portfolio
         </a>
       </div>

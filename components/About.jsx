@@ -52,7 +52,7 @@ const About = ({ data }) => {
               <p className="text-sm">Backend</p>
             </div>
           </aside>
-          <article className="py-5 space-y-10 text-justify w-[90%] mx-auto md:w-full">
+          <article className="py-5 space-y-10 text-justify w-[80%] mx-auto md:w-full">
             <p className="py-2">{data.desc}</p>
 
             <a

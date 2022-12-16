@@ -47,7 +47,7 @@ const Portfolio = ({ projectData }) => {
             <div
               className={`card mt-5 ${
                 toggle ? "bg-base-300" : "bg-base-100"
-              } shadow-2xl rounded-xl`}
+              } shadow-xl rounded-xl`}
             >
               <div className="card-body">
                 <h2 className="card-title">{project.name}</h2>

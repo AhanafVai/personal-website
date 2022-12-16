@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import { AiOutlineAppstoreAdd, AiOutlineClose } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -32,9 +33,9 @@ const Navbar = () => {
         <div className="flex items-stretch">
           <ul className=" menu menu-horizontal  hidden sm:flex">
             <li>
-              <a href="#hero" className="target:border-b-2 border-primary">
+              <Link href="/#hero" className="target:border-b-2 border-primary">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#about-me" className="target:border-b-2 border-primary">
