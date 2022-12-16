@@ -2,11 +2,26 @@ import React, { useContext, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
+import Pagination from "./Pagination";
 
 const Portfolio = ({ projectData }) => {
   const { toggle } = useContext(ThemeContext);
-
   const [showFullText, setShowFullText] = useState(false);
+
+  //? Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectPerPage, setProjectPerPage] = useState(3);
+
+  //? Get currentPage Projects
+  const indexOfLastProject = currentPage * projectPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectPerPage;
+  const currentProject = projectData.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  //? Change Pages
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <section id="portfolios" className="mt-32">
@@ -19,8 +34,8 @@ const Portfolio = ({ projectData }) => {
       </article>
       {/* projects */}
 
-      <aside className="my-5 md:flex gap-2">
-        {projectData.map((project) => (
+      <aside className="my-5 md:flex flex-wrap gap-2">
+        {currentProject.map((project) => (
           <div key={project._id} className="py-5 w-4/5 mx-auto md:w-[30%]">
             {/* image */}
             <figure className="avatar ">
@@ -65,6 +80,11 @@ const Portfolio = ({ projectData }) => {
             </div>
           </div>
         ))}
+        <Pagination
+          projectPerPage={projectPerPage}
+          totalProjects={projectData.length}
+          paginate={paginate}
+        />
       </aside>
     </section>
   );
