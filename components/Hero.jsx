@@ -6,7 +6,7 @@ import classes from "../styles/blob.module.css";
 const Hero = () => {
   const { toggle } = useContext(ThemeContext);
   return (
-    <section className="md:mt-32 md:grid grid-cols-2 ">
+    <section id="hero" className="md:mt-32 md:grid grid-cols-2">
       {/* Image */}
 
       <figure className={`${classes.hero__image} md:order-1 `}>

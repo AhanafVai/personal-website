@@ -9,7 +9,7 @@ const Portfolio = ({ projectData }) => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <section className="mt-32">
+    <section id="portfolios" className="mt-32">
       {/* header */}
       <article>
         <h2 className="text-2xl font-bold text-center md:text-5xl">

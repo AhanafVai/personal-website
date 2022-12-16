@@ -32,27 +32,18 @@ const Navbar = () => {
         <div className="flex items-stretch">
           <ul className=" menu menu-horizontal  hidden sm:flex">
             <li>
-              <a
-                href="#home"
-                id="home"
-                className="target:border-b-2 border-primary"
-              >
+              <a href="#hero" className="target:border-b-2 border-primary">
                 Home
               </a>
             </li>
             <li>
-              <a
-                href="#about"
-                id="about"
-                className="target:border-b-2 border-primary"
-              >
+              <a href="#about-me" className="target:border-b-2 border-primary">
                 About
               </a>
             </li>
             <li>
               <a
-                href="#service"
-                id="service"
+                href="#service&skill"
                 className="target:border-b-2 border-primary"
               >
                 Service
@@ -60,8 +51,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#portfolio"
-                id="portfolio"
+                href="#portfolios"
                 className="target:border-b-2 border-primary"
               >
                 Portfolio

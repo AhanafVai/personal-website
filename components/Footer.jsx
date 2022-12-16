@@ -12,9 +12,15 @@ const Footer = () => {
       } text-base-content rounded`}
     >
       <div className="grid grid-flow-col gap-4">
-        <a className="link link-hover">Home</a>
-        <a className="link link-hover">About</a>
-        <a className="link link-hover">Portfolio</a>
+        <a href="#hero" className="link link-hover">
+          Home
+        </a>
+        <a href="#abt" className="link link-hover">
+          About
+        </a>
+        <a id="port" className="link link-hover">
+          Portfolio
+        </a>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">

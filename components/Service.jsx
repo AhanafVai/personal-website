@@ -7,7 +7,7 @@ import classes from "../styles/animation.module.css";
 const Service = ({ serviceData }) => {
   const { toggle } = useContext(ThemeContext);
   return (
-    <section className="mt-32">
+    <section id="service&skill" className="mt-32">
       <article>
         <h2 className="text-2xl font-bold text-center md:text-5xl">
           Service <span className="text-primary">& Skill</span>
