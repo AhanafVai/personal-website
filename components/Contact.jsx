@@ -4,6 +4,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { RiMailSendLine, RiMessengerLine } from "react-icons/ri";
+import { Element } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Contact = () => {
@@ -20,24 +21,26 @@ const Contact = () => {
   }
   const { toggle } = useContext(ThemeContext);
   return (
-    <section id="contact" className="mt-32">
+    <Element name="contact" className="mt-32">
       <article>
-        <h2 className="text-2xl font-bold text-center md:text-5xl">
+        <h2 className="text-2xl font-bold text-center md:text-4xl lg:text-5xl">
           Cont<span className="text-primary">act</span>
         </h2>
-        <h4 className="text-xs text-center  md:text-xl ">Get in touch</h4>
+        <h4 className="text-xs text-center  md:text-lg lg:text-xl">
+          Get in touch
+        </h4>
       </article>
 
       <div className=" md:grid grid-cols-2 md:mt-20">
         <aside className="my-5">
-          <h4 className="text-sm text-center font-semibold  md:text-xl ">
+          <h4 className="text-sm text-center font-semibold  md:text-lg lg:text-xl">
             Talk to me
           </h4>
 
           {/* card 1*/}
           <a
             href="mailto:ahanafabdullah9@gmail.com"
-            className={`card w-4/5 ${
+            className={`card w-4/5 md:w-[80%]  ${
               toggle ? "bg-base-300" : "bg-base-100"
             } shadow-xl mx-auto my-10 md:w-full md:my-5`}
           >
@@ -58,7 +61,7 @@ const Contact = () => {
           <a
             href="https://wa.me/01516758149"
             target="_blank"
-            className={`card w-4/5 ${
+            className={`card w-4/5 md:w-[80%]  ${
               toggle ? "bg-base-300" : "bg-base-100"
             } shadow-xl mx-auto my-10 md:w-full md:my-5`}
           >
@@ -79,11 +82,11 @@ const Contact = () => {
           <a
             href="https://m.me/ahanafabdullah"
             target="_blank"
-            className={`card w-4/5 ${
+            className={`card w-4/5 md:w-[80%]  ${
               toggle ? "bg-base-300" : "bg-base-100"
             } shadow-xl mx-auto my-10 md:w-full md:my-5`}
           >
-            <figure className=" pt-10 md:pt-5">
+            <figure className="pt-10 md:pt-5">
               <RiMessengerLine className="text-4xl" />
             </figure>
             <div className="card-body items-center">
@@ -97,7 +100,7 @@ const Contact = () => {
           </a>
         </aside>
         <aside className="my-5">
-          <h4 className="text-sm text-center font-semibold  md:text-xl ">
+          <h4 className="text-sm text-center font-semibold  md:text-lg lg:text-xl">
             Share your project
           </h4>
           {/* form */}
@@ -145,7 +148,7 @@ const Contact = () => {
               disabled={state.submitting}
               className={`btn ${
                 toggle ? "btn-primary" : "btn-neutral"
-              } md:h-20 md:text-xl`}
+              }  lg:h-20 md:text-base lg:text-xl`}
             >
               {" "}
               Say Hello{"  "}
@@ -154,7 +157,7 @@ const Contact = () => {
           </form>
         </aside>
       </div>
-    </section>
+    </Element>
   );
 };
 

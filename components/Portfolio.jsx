@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Element } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
 import Pagination from "./Pagination";
@@ -24,19 +25,21 @@ const Portfolio = ({ projectData }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section id="portfolios" className="mt-32">
+    <Element name="portfolio" className="mt-32">
       {/* header */}
       <article>
-        <h2 className="text-2xl font-bold text-center md:text-5xl">
+        <h2 className="text-2xl font-bold text-center md:text-4xl lg:text-5xl">
           Portfo<span className="text-primary">lio</span>
         </h2>
-        <h4 className="text-xs text-center  md:text-xl ">Most recent work</h4>
+        <h4 className="text-xs text-center  md:text-lg lg:text-xl">
+          Most recent work
+        </h4>
       </article>
-      {/* projects */}
 
+      {/* projects */}
       <aside className="my-5 md:flex flex-wrap gap-2">
         {currentProject.map((project) => (
-          <div key={project._id} className="py-5 w-4/5 mx-auto md:w-[30%]">
+          <div key={project._id} className="py-5 w-4/5 mx-auto md:w-[32%]">
             {/* image */}
             <figure className="avatar ">
               <div className=" rounded-xl ">
@@ -70,10 +73,12 @@ const Portfolio = ({ projectData }) => {
                   <a
                     href={project.link}
                     target="_blank"
-                    className={`btn ${toggle ? "btn-primary" : "btn-neutral"} `}
+                    className={`btn btn-outline ${
+                      toggle ? "btn-primary" : "btn-neutral"
+                    } `}
                   >
                     {" "}
-                    Launch <FaExternalLinkAlt />
+                    Launch <FaExternalLinkAlt className="pl-1" />
                   </a>
                 </div>
               </div>
@@ -86,7 +91,7 @@ const Portfolio = ({ projectData }) => {
           paginate={paginate}
         />
       </aside>
-    </section>
+    </Element>
   );
 };
 

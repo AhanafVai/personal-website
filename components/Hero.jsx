@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
 import { FiSend } from "react-icons/fi";
+import { Element } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 import classes from "../styles/blob.module.css";
+import Meta from "./Meta";
 
 const Hero = () => {
   const { toggle } = useContext(ThemeContext);
   return (
-    <section id="hero" className="md:mt-32 md:grid grid-cols-2 ">
+    <Element name="hero" className="md:mt-32 md:grid grid-cols-2 ">
+      <Meta />
+
       {/* Image */}
 
       <figure className={`${classes.hero__image} md:order-1 `}>
@@ -29,10 +33,10 @@ const Hero = () => {
         >
           {" "}
           Say Hello{"  "}
-          <FiSend className="text-2xl" />
+          <FiSend className="text-2xl pl-1" />
         </a>
       </article>
-    </section>
+    </Element>
   );
 };
 

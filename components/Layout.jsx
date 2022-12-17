@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       className="max-w-screen-lg mx-auto"
     >
       <Navbar />
-      <main className=" my-10 lg:mx-20">{children}</main>
+      <main className="md:mx-16 lg:mx-20">{children}</main>
       <Footer />
     </div>
   );

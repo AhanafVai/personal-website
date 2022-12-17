@@ -1,8 +1,8 @@
-import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import { AiOutlineAppstoreAdd, AiOutlineClose } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { ImSun } from "react-icons/im";
+import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
@@ -24,48 +24,70 @@ const Navbar = () => {
     <nav
       className={` ${
         isSticky ? "sticky z-20 opacity-95 shadow top-0" : "static"
-      }   navbar px-5 lg:px-20 bg-base-100 `}
+      }   navbar px-5 md:px-20 bg-base-100`}
     >
       <div className="flex-1 lg:flex-none">
-        <a className="text-lg font-bold">Ahanaf</a>
+        <Link to="hero" className="text-lg font-bold hover:text-primary">
+          Ahanaf
+        </Link>
       </div>
       <div className="flex justify-end flex-1  ">
         <div className="flex items-stretch">
           <ul className=" menu menu-horizontal  hidden sm:flex">
             <li>
-              <Link href="/#hero" className="target:border-b-2 border-primary">
+              <Link
+                activeClass="border-b-2 border-primary"
+                to="hero"
+                spy={true}
+                smooth={true}
+                offset={-200}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <a href="#about-me" className="target:border-b-2 border-primary">
+              <Link
+                activeClass="border-b-2 border-primary"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-200}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#service&skill"
-                className="target:border-b-2 border-primary"
+              <Link
+                activeClass="border-b-2 border-primary"
+                to="service"
+                spy={true}
+                smooth={true}
+                offset={-200}
               >
                 Service
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#portfolios"
-                className="target:border-b-2 border-primary"
+              <Link
+                activeClass="border-b-2 border-primary"
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                offset={-200}
               >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                id="contact"
-                className="target:border-b-2 border-primary"
+              <Link
+                activeClass="border-b-2 border-primary"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-200}
               >
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
               <label className="swap swap-rotate">
@@ -118,31 +140,61 @@ const Navbar = () => {
                   </div>
                 </label>
               </div>
-              <ul className="grid grid-cols-3 gap-3 justify-center p-5 ">
+              <ul className="grid grid-cols-3 gap-5  p-5 ">
                 <li className="py-5 text-sm">
-                  <a href="#home" id="home">
+                  <Link
+                    activeClass="text-primary"
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                  >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-5 text-sm">
-                  <a href="#about" id="about">
+                  <Link
+                    activeClass="text-primary"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                  >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-5 text-sm">
-                  <a href="#service" id="service">
+                  <Link
+                    activeClass="text-primary"
+                    to="service"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                  >
                     Service
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-5 text-sm">
-                  <a href="#portfolio" id="portfolio">
+                  <Link
+                    activeClass="text-primary"
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                  >
                     Portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-5 text-sm">
-                  <a href="#contact" id="contact">
+                  <Link
+                    activeClass="text-primary"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                  >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </label>

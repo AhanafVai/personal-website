@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { Link } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Footer = () => {
@@ -12,31 +13,37 @@ const Footer = () => {
       } text-base-content rounded`}
     >
       <article>
-        <a href="#hero" className="text-lg font-bold">
+        <Link
+          to="hero"
+          className=" font-bold hover:text-primary md:text-xl lg:text-4xl"
+        >
           Ahanaf
-        </a>
+        </Link>
       </article>
       <div className="grid grid-flow-col gap-4">
-        <a href="#hero" className="link link-hover">
+        <Link to="hero" className="hover:border-b-2 border-black md:text-xl">
           Home
-        </a>
-        <a href="#about" className="link link-hover">
+        </Link>
+        <Link to="about" className="hover:border-b-2 border-black md:text-xl">
           About
-        </a>
-        <a id="portfolios" className="link link-hover">
+        </Link>
+        <Link
+          to="portfolio"
+          className="hover:border-b-2 border-black md:text-xl"
+        >
           Portfolio
-        </a>
+        </Link>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
           <a href="https://twitter.com/Ahanafabdullah1" target="_blank">
-            <FaTwitter className="text-2xl" />
+            <FaTwitter className="text-2xl hover:text-primary md:text-4xl" />
           </a>
           <a href="https://www.linkedin.com/in/ahanafabdullah9" target="_blank">
-            <FaLinkedinIn className="text-2xl" />
+            <FaLinkedinIn className="text-2xl hover:text-primary md:text-4xl" />
           </a>
           <a href="https://github.com/AhanafVai" target="_blank">
-            <FaGithub className="text-2xl" />
+            <FaGithub className="text-2xl hover:text-primary md:text-4xl" />
           </a>
         </div>
       </div>
