@@ -1,5 +1,5 @@
 .element {
-  transform: translateY(00px);
+  transform: translateY(0px);
   transition: transform 0.5s linear;
 }
 

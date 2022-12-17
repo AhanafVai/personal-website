@@ -45,6 +45,7 @@ const Portfolio = ({ projectData }) => {
               <div className=" rounded-xl ">
                 <img src={urlFor(project.image)} alt={project.name} />
               </div>
+              <figcaption className="sr-only">{project.name}</figcaption>
             </figure>
             {/* card */}
             <div

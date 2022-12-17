@@ -14,7 +14,7 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  animation: blob 4s linear infinite;
+  animation: blob 5s linear infinite;
 }
 
 @media only screen and (max-width: 600px) {
