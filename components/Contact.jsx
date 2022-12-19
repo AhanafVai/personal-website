@@ -156,7 +156,7 @@ const Contact = () => {
               disabled={state.submitting}
               className={`btn ${
                 toggle ? "btn-primary" : "btn-neutral"
-              }  lg:h-20 md:text-base lg:text-xl`}
+              }  lg:h-20 lg:text-xl`}
             >
               {" "}
               Say Hello{"  "}

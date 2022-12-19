@@ -16,26 +16,27 @@ const About = ({ data }) => {
 
   return (
     <Element name="about" className=" mt-32">
+      {/* article */}
       <article>
-        <h2 className="text-2xl font-bold text-center md:text-4xl lg:text-5xl">
+        <h2 className="font-bold text-center text-2xl md:text-4xl lg:text-5xl">
           About <span className="text-primary">Me</span>
         </h2>
         <h4 className="text-xs text-center  md:text-lg lg:text-xl">
           My Introduction
         </h4>
       </article>
-
+      {/* Image ,card & article container */}
       <div className="md:my-10 md:flex justify-between  items-center">
         {/* image */}
-        <figure className="avatar flex justify-center my-5 md:w-[45%] lg:w-2/5">
-          <div className="w-48 rounded-xl md:w-full">
+        <figure className="avatar my-5 md:w-[48%] lg:w-[40%]">
+          <div className="w-[80%] mx-auto rounded-xl md:w-full">
             <img src={urlFor(data.image)} />
           </div>
           <figcaption className="sr-only">React/Next Developer</figcaption>
         </figure>
-        {/* skill card */}
-        <div className="md:w-[50%] lg:w-1/2">
-          <aside className="grid grid-cols-3 mx-auto gap-3 w-4/5 md:w-full ">
+        {/* skill card, article container */}
+        <div className="space-y-5 md:w-[45%] lg:w-[50%]">
+          <aside className="mx-auto grid grid-cols-3 gap-3 w-4/5 md:w-full ">
             {/* skill card 1 */}
             <motion.div
               whileHover={{ translateY: -10 }}
@@ -86,20 +87,18 @@ const About = ({ data }) => {
               <p className="text-sm">Backend</p>
             </motion.div>
           </aside>
-          <article className="py-5 text-justify mx-auto w-[80%] md:w-full md:text-sm md:space-y-3 lg:space-y-10 lg:text-lg">
-            <p className="py-2">{data.desc}</p>
-
-            <a
-              href={pdf}
-              download
-              className={`btn ${
-                toggle ? "btn-primary" : "btn-neutral"
-              } md:text-lg lg:text-xl`}
-            >
-              Download CV{" "}
-              <CgFileDocument className="lg:text-xl md:text-base " />
-            </a>
+          <article className="text-justify mx-auto w-[80%] md:w-full lg:text-xl">
+            <p>{data.desc}</p>
           </article>
+          <button
+            href={pdf}
+            download
+            className={`m-10 btn ${
+              toggle ? "btn-primary" : "btn-neutral"
+            } md:m-0 lg:btn-lg`}
+          >
+            Download CV <CgFileDocument />
+          </button>
         </div>
       </div>
     </Element>

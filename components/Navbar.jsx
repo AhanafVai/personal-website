@@ -33,7 +33,7 @@ const Navbar = () => {
       </div>
       <div className="flex justify-end flex-1  ">
         <div className="flex items-stretch">
-          <ul className=" menu menu-horizontal  hidden sm:flex">
+          <ul className="menu menu-horizontal hidden sm:flex">
             <li>
               <Link
                 activeClass="border-b-2 border-primary"
@@ -140,8 +140,8 @@ const Navbar = () => {
                   </div>
                 </label>
               </div>
-              <ul className="grid grid-cols-3 gap-5  p-5 ">
-                <li className="py-5 text-sm">
+              <ul className="flex flex-wrap justify-center gap-10 p-10 text-base">
+                <li>
                   <Link
                     activeClass="text-primary"
                     to="hero"
@@ -152,7 +152,7 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                <li className="py-5 text-sm">
+                <li>
                   <Link
                     activeClass="text-primary"
                     to="about"
@@ -163,7 +163,7 @@ const Navbar = () => {
                     About
                   </Link>
                 </li>
-                <li className="py-5 text-sm">
+                <li>
                   <Link
                     activeClass="text-primary"
                     to="service"
@@ -174,7 +174,7 @@ const Navbar = () => {
                     Service
                   </Link>
                 </li>
-                <li className="py-5 text-sm">
+                <li>
                   <Link
                     activeClass="text-primary"
                     to="portfolio"
@@ -185,7 +185,7 @@ const Navbar = () => {
                     Portfolio
                   </Link>
                 </li>
-                <li className="py-5 text-sm">
+                <li>
                   <Link
                     activeClass="text-primary"
                     to="contact"

@@ -4,8 +4,8 @@
   justify-content: center;
 }
 .blob {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   /* overflow: hidden; */
   border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
   border: solid 5px rgba(255, 255, 255, 0.253);
@@ -17,10 +17,16 @@
   animation: blob 5s linear infinite;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 640px) {
   .blob {
-    width: 224px;
-    height: 224px;
+    width: 280px;
+    height: 280px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .blob {
+    width: 300px;
+    height: 300px;
   }
 }
 
