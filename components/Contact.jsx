@@ -42,6 +42,7 @@ const Contact = () => {
             whileHover={{ translateY: -10 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             href="mailto:ahanafabdullah9@gmail.com"
+            target="_blank"
             className={`hover:shadow-amber-300 card w-4/5 md:w-[80%]  ${
               toggle ? "bg-base-300" : "bg-base-100"
             } shadow-xl mx-auto my-10 md:w-full md:my-5`}
