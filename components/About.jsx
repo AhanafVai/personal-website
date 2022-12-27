@@ -14,7 +14,7 @@ const About = ({ data }) => {
   const { toggle } = useContext(ThemeContext);
 
   const pdf =
-    "https://cdn.sanity.io/files/k29ugrfd/production/26675e3c307193717a7b291b18cacc05fd506286.pdf";
+    "https://drive.google.com/file/d/1b1WuPL4vadFxpAvf860rSCzu10Uj-gis/view?usp=share_link";
 
   return (
     <Element name="about" className=" mt-32">
