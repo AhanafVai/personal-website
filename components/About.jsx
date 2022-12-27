@@ -1,3 +1,4 @@
+import React from "react"
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { CgFileDocument } from "react-icons/cg";
@@ -7,6 +8,7 @@ import { TfiServer } from "react-icons/tfi";
 import { Element } from "react-scroll";
 import { ThemeContext } from "../context/ThemeContext";
 import { urlFor } from "../lib/client";
+
 
 const About = ({ data }) => {
   const { toggle } = useContext(ThemeContext);
@@ -90,15 +92,14 @@ const About = ({ data }) => {
           <article className="text-justify mx-auto w-[80%] md:w-full lg:text-xl">
             <p>{data.desc}</p>
           </article>
-          <button
-            href={pdf}
+            <a href={pdf}
+            target="_blank"
             download
-            className={`m-10 btn ${
-              toggle ? "btn-primary" : "btn-neutral"
-            } md:m-0 lg:btn-lg`}
-          >
-            Download CV <CgFileDocument />
-          </button>
+             className={`m-10 btn ${
+               toggle ? "btn-primary" : "btn-neutral"
+             } md:m-0 lg:btn-lg`}
+            > Download CV <CgFileDocument /></a>
+         
         </div>
       </div>
     </Element>

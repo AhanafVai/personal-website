@@ -28,6 +28,7 @@ const Hero = () => {
 
         <a
           href="mailto:ahanafabdullah9@gmail.com"
+          target="_blank"
           className={`btn ${toggle ? "btn-primary" : "btn-neutral"} lg:btn-lg`}
         >
           {" "}
