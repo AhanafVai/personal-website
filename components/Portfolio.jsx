@@ -55,7 +55,7 @@ const Portfolio = ({ projectData }) => {
             >
               <div className="card-body">
                 <h2 className="card-title">{project.name}</h2>
-                <p>
+                <p key={project._id}>
                   {showFullText
                     ? `${project.desc}`
                     : `${project.desc}`.substring(0, 20)}
@@ -70,7 +70,7 @@ const Portfolio = ({ projectData }) => {
                     </button>
                   )}
                 </p>
-                <div>
+                <div className="flex space-x-2">
                   <a
                     href={project.link}
                     target="_blank"
@@ -81,6 +81,18 @@ const Portfolio = ({ projectData }) => {
                     {" "}
                     Launch <FaExternalLinkAlt className="pl-1" />
                   </a>
+                  {/* //!Test */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className={` btn  ${
+                      toggle ? "btn-primary" : "btn-neutral"
+                    } `}
+                  >
+                    {" "}
+                    GitHub
+                  </a>
+                  {/* //!Test */}
                 </div>
               </div>
             </div>

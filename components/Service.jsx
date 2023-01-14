@@ -21,8 +21,8 @@ const Service = ({ serviceData }) => {
       <div className="md:grid grid-cols-3 lg:flex gap-2">
         {serviceData.map((service) => (
           <motion.div
-            whileHover={{ translateY: -10 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            // whileHover={{ translateY: -10 }}
+            // transition={{ duration: 0.5, ease: "easeInOut" }}
             key={service._id}
             className={`hover:shadow-primary card w-[80%] lg:w-full md:w-[95%] ${
               toggle ? "bg-base-300" : "bg-base-100"
@@ -38,6 +38,7 @@ const Service = ({ serviceData }) => {
               <h2 className="card-title">{service.title}</h2>
               <p>{service.decs}</p>
             </div>
+
             <article className="text-center">
               <p className="text-sm font-semibold text-center md:text-lg">
                 Tools I use
